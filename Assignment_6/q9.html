@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>LCM</title>
+    </head>
+    <body>
+        <script>
+            let a=parseInt(prompt('enetr first no.: '));
+            let b=parseInt(prompt('enetr second no.: '));
+            function gcd(a,b){
+                while(b!=0){
+                    let temp=b;
+                    b=a%b;
+                    a=temp;
+                }
+                return a;
+            }
+            let result =gcd(a,b);
+            let lcm=(a*b)/result;
+            window.alert('the lcm of '+a+' and '+b+' is '+lcm);
+        </script>
+    </body>
+</html>
