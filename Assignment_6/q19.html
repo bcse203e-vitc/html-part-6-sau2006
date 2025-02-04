@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>longest word in sentence</title></head>
+<body>
+    <script>
+        function longestWord(sentence) {
+            let words=sentence.split(' ');
+            let longest=words.reduce((longest,current) => current.length>longest.length? current: longest,'');
+            return longest;
+        }
+        let input=prompt('enter a sentence: ');
+        let result=longestWord(input);
+        window.alert('longest word: ' +result);
+    </script>
+</body>
+</html>
