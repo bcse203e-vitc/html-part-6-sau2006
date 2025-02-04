@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>second smallest and second largest</title></head>
+    <body>
+        <script>
+            function findSecondSmallestAndLargest(arr) {
+            let uniqueArr=[...new Set(arr)].sort((a, b) => a - b);
+            if (uniqueArr.length<2) {
+                return {secondSmallest: 'N/A',secondLargest: 'N/A'};
+            }
+            return {
+                secondSmallest: uniqueArr[1],
+                secondLargest: uniqueArr[uniqueArr.length-2]
+            };
+        }
+        let input=prompt('Enter numbers separated by commas: ');
+        let arr=input.split(',').map(Number);
+        let result=findSecondSmallestAndLargest(arr);
+        window.alert('Second Smallest: ' + result.secondSmallest + '\nSecond Largest: ' + result.secondLargest);
+        </script>
+    </body>
+</html>
