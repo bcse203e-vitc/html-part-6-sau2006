@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>first non repeating char</title></head>
+<body>
+    <script>
+        function firstNonRepeating(str) {
+            for (let i= 0;i<str.length;i++) {
+                if (str.indexOf(str[i])===str.lastIndexOf(str[i])){
+                    return str[i];
+                }
+            }
+            return null;
+        }
+        let input=prompt('enter a string: ');
+        let result=firstNonRepeating(input);
+        window.alert('first non-repeating character: ' + (result? result: 'none'))
+    </script>
+</body>
+</html>
