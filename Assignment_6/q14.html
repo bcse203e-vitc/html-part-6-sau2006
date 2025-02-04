@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>pangram</title></head>
+    <body>
+        <script>
+            function isPangram(str) {
+            let alphabet='abcdefghijklmnopqrstuvwxyz';
+            str = str.toLowerCase();
+            for(let char of alphabet) {
+                if(!str.includes(char)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        let input=prompt('Enter a sentence: ');
+        window.alert(isPangram(input) ? 'it is a pangram.':'it is not a pangram.');
+        </script>
+    </body>
+</html>
