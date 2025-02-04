@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>no. of vwels and consonants</title></head>
+    <body>
+        <script>
+            function countVowelsAndConsonants(str) {
+            let vowels = 'aeiouAEIOU';
+            let vowelCount = 0, consonantCount = 0;
+            let vowelChars = [], consonantChars = [];
+            for (let char of str) {
+                if (char.match(/[a-zA-Z]/)) {
+                    if (vowels.includes(char)) {
+                        vowelCount++;
+                        vowelChars.push(char);
+                    } else {
+                        consonantCount++;
+                        consonantChars.push(char);
+                    }
+                }
+            }
+            return {
+                vowelCount,
+                consonantCount,
+                vowelChars,
+                consonantChars
+            };
+        }
+        let input = prompt('Enter a string: ');
+        let result = countVowelsAndConsonants(input);
+        window.alert(`Vowels: ${result.vowelCount} (${result.vowelChars.join(', ')})\n` +
+                     `Consonants: ${result.consonantCount} (${result.consonantChars.join(', ')})`);
+        </script>
+    </body>
+</html>
