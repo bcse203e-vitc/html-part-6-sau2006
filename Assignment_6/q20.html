@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>occurrences of each char</title></head>
+<body>
+    <script>
+        function countOccurrences(str){
+            let occurrences={};
+            for (let char of str){
+                occurrences[char]=(occurrences[char] || 0) + 1;
+            }
+            return occurrences;
+        }
+        let input=prompt('enter a string: ');
+        let result=countOccurrences(input);
+        window.alert('character occurrences: '+JSON.stringify(result));
+    </script>
+</body>
+</html>
