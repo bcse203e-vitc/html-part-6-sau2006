@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>asc/desc</title></head>
+<body>
+    <script>
+        function bubbleSort(arr, asc = true) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                for (let j = 0; j < arr.length - 1 - i; j++) {
+                    if ((asc && arr[j] > arr[j+1]) || (!asc && arr[j] < arr[j+1])) {
+                        [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+                    }
+                }
+            }
+            return arr;
+        }
+        let inp = prompt('Enter numbers separated by commas: ').split(',').map(Number);
+        window.alert('Ascending: ' + bubbleSort([...inp]).join(', ') + '\nDescending: ' + bubbleSort([...inp], false).join(', '));
+    </script>
+</body>
+</html>
