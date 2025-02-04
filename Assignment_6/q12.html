@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>remove duplicates from an array</title></head>
+    <body>
+        <script>
+            function removeDuplicates(arr) {
+            let uniqueArr=[];
+            for (let num of arr) {
+                if (!uniqueArr.includes(num)) {
+                    uniqueArr.push(num);
+                }
+            }
+            return uniqueArr;
+        }
+        let input=prompt('enter numbers separated by commas: ');
+        let arr=input.split(',').map(Number);
+        let result=removeDuplicates(arr);
+        window.alert('arr without duplicates: [' + result.join(', ') + ']');
+        </script>
+    </body>
+</html>
