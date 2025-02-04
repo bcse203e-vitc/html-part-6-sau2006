@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>missing number in array</title></head>
+    <body>
+        <script>
+            function findMiss(arr){
+            let n=arr.length+1, sum=(n*(n+1))/2, actual=arr.reduce((s,num) => s+num, 0);
+            return sum-actual;
+        }
+        let inp=prompt('enter numbers separated by commas: ').split(',').map(Number);
+        window.alert('missing number: ' + findMiss(inp));
+        </script>
+    </body>
+</html>
